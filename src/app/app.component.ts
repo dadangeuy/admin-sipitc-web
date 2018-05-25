@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Laboratory} from './model/laboratory';
+import {SessionStorage} from 'ngx-store';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  @SessionStorage({key: 'lab'}) lab: Laboratory;
+
+  isLoggedIn(): boolean {
+    return this.lab != null;
+  }
 }

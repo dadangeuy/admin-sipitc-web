@@ -12,11 +12,13 @@ import {ConfirmComponent} from './confirm/confirm.component';
 import {WebStorageModule} from 'ngx-store';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {LogoutComponent} from './logout/logout.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: '', pathMatch: 'full', component: LoginComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'logout', component: LogoutComponent},
   {path: 'add', component: AddInventComponent},
   {path: 'list', component: ListComponent},
   {path: 'history', component: HistoryComponent},
@@ -31,7 +33,8 @@ const routes: Routes = [
     AddInventComponent,
     ListComponent,
     HistoryComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
