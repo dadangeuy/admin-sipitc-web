@@ -5,4 +5,5 @@ export class Reservation {
   reason: string;
   inventory_id: number;
   status: string;
+  id: number;
 }

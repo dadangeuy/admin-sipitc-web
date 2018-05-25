@@ -18,16 +18,18 @@ export class ReservationService {
   constructor(private http: HttpClient) {
   }
 
-  acceptReservation(): Observable<RailsResponse> {
+  acceptReservation(inventory_id): Observable<RailsResponse> {
+    const url = `${this.baseUrl}/${inventory_id}`;
     const auth = `${this.lab.name}:${this.lab.password}`;
     const headers = new HttpHeaders().set('Authorization', auth);
-    return this.http.put<RailsResponse>(this.baseUrl, {status: 'Diterima'}, {headers: headers});
+    return this.http.put<RailsResponse>(url, {status: 'Diterima'}, {headers: headers});
   }
 
-  rejectReservation(): Observable<RailsResponse> {
+  rejectReservation(inventory_id): Observable<RailsResponse> {
+    const url = `${this.baseUrl}/${inventory_id}`;
     const auth = `${this.lab.name}:${this.lab.password}`;
     const headers = new HttpHeaders().set('Authorization', auth);
-    return this.http.put<RailsResponse>(this.baseUrl, {status: 'Ditolak'}, {headers: headers});
+    return this.http.put<RailsResponse>(url, {status: 'Ditolak'}, {headers: headers});
   }
 
   getAllReservation(): Observable<Reservation[]> {

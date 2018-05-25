@@ -15,15 +15,15 @@ export class ConfirmComponent implements OnInit {
   ngOnInit() {
   }
 
-  acceptReservation() {
-    this.service.acceptReservation().subscribe(() => {
+  acceptReservation(id) {
+    this.service.acceptReservation(id).subscribe(() => {
       alert('Reservasi Berhasil Diterima');
       this.reservationData$ = this.service.getAllReservation();
     });
   }
 
-  rejectReservation() {
-    this.service.rejectReservation().subscribe(() => {
+  rejectReservation(id) {
+    this.service.rejectReservation(id).subscribe(() => {
       alert('Reservasi Berhasil Ditolak');
       this.reservationData$ = this.service.getAllReservation();
     });

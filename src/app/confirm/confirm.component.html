@@ -31,8 +31,8 @@
             <td>{{reservation.end_date}}</td>
             <td>{{reservation.reason}}</td>
             <td>
-              <button type="button" class="btn btn-success" (click)="acceptReservation()">Terima</button>
-              <button type="button" class="btn btn-danger" (click)="rejectReservation()">Tolak</button>
+              <button type="button" class="btn btn-success" (click)="acceptReservation(reservation.id)">Terima</button>
+              <button type="button" class="btn btn-danger" (click)="rejectReservation(reservation.id)">Tolak</button>
             </td>
           </tr>
           </tbody>
