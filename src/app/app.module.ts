@@ -11,7 +11,8 @@ import {HistoryComponent} from './history/history.component';
 import {ConfirmComponent} from './confirm/confirm.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
+  {path: '', pathMatch: 'full', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'add', component: AddInventComponent},
   {path: 'list', component: ListComponent},
