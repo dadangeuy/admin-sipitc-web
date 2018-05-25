@@ -7,12 +7,16 @@ import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {AddInventComponent} from './add-invent/add-invent.component';
 import {ListComponent} from './list/list.component';
+import {HistoryComponent} from './history/history.component';
+import {ConfirmComponent} from './confirm/confirm.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'add', component: AddInventComponent},
-  {path: 'list', component: ListComponent}
+  {path: 'list', component: ListComponent},
+  {path: 'history', component: HistoryComponent},
+  {path: 'confirm', component: ConfirmComponent}
 ];
 
 @NgModule({
@@ -21,7 +25,9 @@ const routes: Routes = [
     HomeComponent,
     LoginComponent,
     AddInventComponent,
-    ListComponent
+    ListComponent,
+    HistoryComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
