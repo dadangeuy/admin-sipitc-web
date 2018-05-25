@@ -4,15 +4,18 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {RouterModule, Routes} from '@angular/router';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', component: HomeComponent}
+  {path: '', pathMatch: 'full', component: HomeComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -21,4 +24,5 @@ const routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
