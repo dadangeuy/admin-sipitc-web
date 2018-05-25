@@ -21,10 +21,16 @@ export class InventoryService {
     const api = `${this.baseUrl}/${labname}`;
     const auth = `${this.lab.name}:${this.lab.password}`;
     const headers = new HttpHeaders().set('Authorization', auth);
-    this.http.get<RailsResponse>(api, {headers: headers}).subscribe(value => console.log(value));
     return this.http.get<RailsResponse>(api, {headers: headers}).pipe(
       map(value => {
         return value.body;
       }));
+  }
+
+  deleteInventory(id: string): Observable<RailsResponse> {
+    const api = `${this.baseUrl}/${id}`;
+    const auth = `${this.lab.name}:${this.lab.password}`;
+    const headers = new HttpHeaders().set('Authorization', auth);
+    return this.http.delete<RailsResponse>(api, {headers: headers});
   }
 }
