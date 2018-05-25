@@ -15,8 +15,8 @@
         <table id="example1" class="table table-bordered table-striped">
           <thead>
           <tr>
-            <th>NRP Peminjam</th>
-            <th>Nama Inventaris</th>
+            <th>User ID</th>
+            <th>Inventaris ID</th>
             <th>Tanggal Pinjam</th>
             <th>Tanggal Kembali</th>
             <th>Alasan</th>
@@ -24,17 +24,15 @@
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Trident</td>
-            <td>Internet
-              Explorer 4.0
-            </td>
-            <td>A</td>
-            <td>Win 95+</td>
-            <td> 4</td>
+          <tr *ngFor="let reservation of reservationData$ | async;">
+            <td>{{reservation.user_id}}</td>
+            <td>{{reservation.inventory_id}}</td>
+            <td>{{reservation.start_date}}</td>
+            <td>{{reservation.end_date}}</td>
+            <td>{{reservation.reason}}</td>
             <td>
-              <button type="button" class="btn btn-success">Terima</button>
-              <button type="button" class="btn btn-danger">Tolak</button>
+              <button type="button" class="btn btn-success" (click)="acceptReservation()">Terima</button>
+              <button type="button" class="btn btn-danger" (click)="rejectReservation()">Tolak</button>
             </td>
           </tr>
           </tbody>
