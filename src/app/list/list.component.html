@@ -6,7 +6,7 @@
       Home
     </h1>
     <ol class="breadcrumb">
-      <li class="active"><i class="fa fa-home"></i> Home</li>
+      <li class="active"><i class="fa fa-home"></i>Home</li>
     </ol>
   </section>
 
@@ -23,13 +23,11 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>Trident</td>
-          <td>Internet
-            Explorer 4.0
-          </td>
-          <td>Win 95+</td>
-          <td> 4</td>
+        <tr *ngFor="let inventory of inventoryData$ | async;">
+          <td>{{inventory.name}}</td>
+          <td>{{inventory.spec}}</td>
+          <td>{{inventory.status}}</td>
+          <td>{{inventory.note}}</td>
           <td>
             <button type="button" class="btn btn-warning">Edit</button>
             <button type="button" class="btn btn-danger">Hapus</button>
