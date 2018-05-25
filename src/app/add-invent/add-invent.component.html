@@ -15,7 +15,8 @@
     <div class="box box-primary">
       <!-- /.box-header -->
       <!-- form start -->
-      <form role="form">
+      <form role="form"
+            (submit)="createInventory($event.target[0].value, $event.target[1].value, $event.target[2].value)">
         <div class="box-body">
           <div class="form-group">
             <label for="exampleInputEmail1">Nama Inventaris</label>

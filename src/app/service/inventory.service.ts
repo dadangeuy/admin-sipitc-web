@@ -33,4 +33,11 @@ export class InventoryService {
     const headers = new HttpHeaders().set('Authorization', auth);
     return this.http.delete<RailsResponse>(api, {headers: headers});
   }
+
+  createInventory(inventory: Inventory): Observable<RailsResponse> {
+    const auth = `${this.lab.name}:${this.lab.password}`;
+    const headers = new HttpHeaders().set('Authorization', auth);
+    return this.http
+      .post<RailsResponse>(this.baseUrl, inventory, {headers: headers});
+  }
 }
