@@ -1,0 +1,45 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Login
+    </h1>
+    <ol class="breadcrumb">
+      <li class="active"><i class="fa fa-home"></i>Tambah Inventaris</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content container-fluid">
+    <div class="box box-primary">
+      <!-- /.box-header -->
+      <!-- form start -->
+      <form role="form">
+        <div class="box-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nama Inventaris</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Inventory Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Spec Inventaris</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Inventory Spec">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Catatan Inventaris</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Inventory Note">
+          </div>
+        </div>
+        <!-- /.box-body -->
+
+        <div class="box-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <router-outlet></router-outlet>
+
+  </section>
+  <!-- /.content -->
+</div>
