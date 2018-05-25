@@ -9,6 +9,9 @@ import {AddInventComponent} from './add-invent/add-invent.component';
 import {ListComponent} from './list/list.component';
 import {HistoryComponent} from './history/history.component';
 import {ConfirmComponent} from './confirm/confirm.component';
+import {WebStorageModule} from 'ngx-store';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -32,7 +35,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    WebStorageModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

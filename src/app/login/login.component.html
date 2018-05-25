@@ -15,7 +15,7 @@
     <div class="box box-primary">
       <!-- /.box-header -->
       <!-- form start -->
-      <form role="form">
+      <form role="form" (submit)="attemptLogin($event.target[0].value, $event.target[1].value)">
         <div class="box-body">
           <div class="form-group">
             <label for="exampleInputEmail1">Nama Lab</label>
